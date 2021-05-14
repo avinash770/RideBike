@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="predefined_loc_list_margin_start_end">30dp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+
+    <!--  Splash Screen  -->
+    <dimen name="splash_logo_view_mTop">200dp</dimen>
+    <dimen name="splash_heading_size">35sp</dimen>
+    <dimen name="splash_logo_size">200dp</dimen>
+    <dimen name="splash_logo_mTop">10dp</dimen>
+    <dimen name="splash_login_view_mTop">10dp</dimen>
+
+    <!--  Login Screen  -->
+    <dimen name="login_view_mHorizontal">40dp</dimen>
+    <dimen name="login_view_mBottom">10dp</dimen>
+    <dimen name="login_view_edittext_padding">10dp</dimen>
+    <dimen name="login_view_edittext_size">16sp</dimen>
+    <dimen name="login_view_divider_height">2dp</dimen>
+    <dimen name="login_view_edittext_mTop">20dp</dimen>
+    <dimen name="login_view_forgot_pass_margin">10dp</dimen>
+    <dimen name="login_view_no_account_mTop">25dp</dimen>
+    <dimen name="login_view_fb_icon_size">50dp</dimen>
+    <dimen name="login_view_fb_icon_padding">10dp</dimen>
+
+    <!--  Common Button  -->
+    <dimen name="common_button_height">45dp</dimen>
+    <dimen name="common_button_mHorizontal">25dp</dimen>
+    <dimen name="common_button_mTop">25dp</dimen>
+    <dimen name="common_button_padding">20dp</dimen>
+    <dimen name="common_button_text_size">22sp</dimen>
+    <dimen name="common_button_margin">65dp</dimen>
+
+    <!--  Select Interest  -->
+    <dimen name="select_interest_heading_margin">20dp</dimen>
+    <dimen name="select_interest_heading_size">20sp</dimen>
+    <dimen name="select_interest_subheading_margin">15dp</dimen>
+    <dimen name="select_interest_recycler_mStartEnd">20dp</dimen>
+    <dimen name="select_interest_recycler_mTop">15dp</dimen>
+
+    <!--  RecyclerView for select interest  -->
+    <dimen name="recycler_view_item_margin">10dp</dimen>
+    <dimen name="recycler_view_item_text_margin">10dp</dimen>
+    <dimen name="recycler_view_item_text_size">14sp</dimen>
+    <dimen name="vehicle_view_text_padding">10dp</dimen>
+    <dimen name="vehicle_view_text_size">16sp</dimen>
+    <dimen name="vehicle_view_spinner_height">40dp</dimen>
+
+    <!--  Add Friends  -->
+    <dimen name="subheading_mEnd">40dp</dimen>
+    <dimen name="subheading_text_size">14sp</dimen>
+    <dimen name="add_friends_center_view_mTop">30dp</dimen>
+    <dimen name="add_friends_recycler_mTop">10dp</dimen>
+    <dimen name="join_group_view_mTop">30dp</dimen>
+    <dimen name="add_friends_image_size">70dp</dimen>
+    <dimen name="add_friends_image_padding">10dp</dimen>
+    <dimen name="add_friends_textsize">14sp</dimen>
+    <dimen name="add_friends_text_mStart">10dp</dimen>
+    <dimen name="add_friends_checkbox_padding">10dp</dimen>
+
+    <!--  Vehicle Details  -->
+
+    <dimen name="vehicle_detail_image_size">170dp</dimen>
+    <dimen name="vehicle_detail_image_mTop">20dp</dimen>
+    <dimen name="spinner_offset">30dp</dimen>
+    <dimen name="vehicle_view_layout_mTop">10dp</dimen>
+    <dimen name="vehicle_view_layout_mEnd">15dp</dimen>
+
+    <!--  Join Group  -->
+    <dimen name="join_group_image_size">70dp</dimen>
+    <dimen name="join_group_image_padding">10dp</dimen>
+    <dimen name="join_group_text_size">14sp</dimen>
+    <dimen name="join_group_subtext_size">12sp</dimen>
+    <dimen name="join_group_view_size">65dp</dimen>
+    <dimen name="join_group_button_padding">5dp</dimen>
+
+    <!--  Common Header  -->
+    <dimen name="header_heading_mStart">20dp</dimen>
+    <dimen name="header_heading_mTop">30dp</dimen>
+    <dimen name="header_back_size">20dp</dimen>
+    <dimen name="header_back_mStart">10dp</dimen>
+    <dimen name="header_skip_mEnd">15dp</dimen>
+    <dimen name="header_skip_size">14sp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="navigation_menu_icon_padding">20dp</dimen>
+    <dimen name="activity_horizontal_margin">12dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="dashboard_band_id_val_margin_top">5dp</dimen>
+    <dimen name="dashboard_band_id_text_size">14sp</dimen>
+
+    <!--  Home/Landing Activity  -->
+    <dimen name="home_view_fragment_mTop">15dp</dimen>
+    <dimen name="home_view_floating_btn_mBottom">10dp</dimen>
+    <dimen name="home_header_menu_icon_size">24dp</dimen>
+    <dimen name="home_header_right_icon_size">24dp</dimen>
+    <dimen name="home_header_text_size">24sp</dimen>
+    <dimen name="home_bottom_nav_height">65dp</dimen>
+    <dimen name="home_bottom_nav_elevation">16dp</dimen>
+    <dimen name="home_bottom_nav_padding">6dp</dimen>
+    <dimen name="home_fab_margin">16dp</dimen>
+    <dimen name="home_fab_elevation">6dp</dimen>
+    <dimen name="home_fab_translationZ">12dp</dimen>
+    <dimen name="home_fab_mEnd">8dp</dimen>
+    <dimen name="home_fab_text_size">14sp</dimen>
+    <dimen name="home_fab_mStart">10dp</dimen>
+    <dimen name="home_fab_item_size">20dp</dimen>
+
+    <!--  Home Fragment  -->
+    <dimen name="frag_home_checkbox_mStart">15dp</dimen>
+    <dimen name="frag_home_rv_mTop">10dp</dimen>
+    <dimen name="frag_home_item_mTop">10dp</dimen>
+    <dimen name="frag_home_item_user_icon_size">50dp</dimen>
+    <dimen name="frag_home_item_title_padding">5dp</dimen>
+    <dimen name="frag_home_item_image_size">200dp</dimen>
+    <dimen name="frag_home_item_time_pStart">5dp</dimen>
+    <dimen name="frag_home_item_time_pTop">10dp</dimen>
+    <dimen name="frag_home_item_share_icon_pStart">20dp</dimen>
+    <dimen name="frag_home_item_share_icon_size">18sp</dimen>
+    <dimen name="frag_home_checkbox_mEnd">10dp</dimen>
+    <dimen name="frag_home_checkbox_pStart">15dp</dimen>
+    <dimen name="frag_home_checkbox_pTop">5dp</dimen>
+    <dimen name="frag_home_checkbox_pEnd">15dp</dimen>
+    <dimen name="frag_home_checkbox_pBottom">5dp</dimen>
+
+    <!--  Social Fragment  -->
+    <dimen name="frag_social_radio_mEnd">10dp</dimen>
+    <dimen name="frag_social_radio_pStart">15dp</dimen>
+    <dimen name="frag_social_radio_pTop">5dp</dimen>
+    <dimen name="frag_social_radio_pEnd">15dp</dimen>
+    <dimen name="frag_social_radio_pBottom">5dp</dimen>
+    <dimen name="frag_social_filter_mTop">20dp</dimen>
+    <dimen name="frag_social_filter_mEnd">10dp</dimen>
+    <dimen name="frag_social_searchbar_mStart">10dp</dimen>
+    <dimen name="frag_social_searchbar_mEnd">20dp</dimen>
+    <dimen name="frag_social_searchbar_icon_mStart">15dp</dimen>
+    <dimen name="frag_social_searchbar_text_mStart">15dp</dimen>
+    <dimen name="frag_social_scrollview_mTop">15dp</dimen>
+    <dimen name="frag_social_your_grp_mTop">15dp</dimen>
+    <dimen name="frag_social_near_grp_mTop">15dp</dimen>
+
+    <!--  Live View Fragment  -->
+    <dimen name="frag_live_sos_mBottom">26dp</dimen>
+    <dimen name="frag_live_sos_mEnd">16dp</dimen>
+    <dimen name="frag_live_sos_text_size">16sp</dimen>
+    <dimen name="frag_live_sos_elevation">6dp</dimen>
+
+    <!--  Profile Fragment  -->
+    <dimen name="frag_profile_user_icon_size">150dp</dimen>
+    <dimen name="frag_profile_user_icon_mTop">8dp</dimen>
+    <dimen name="frag_profile_user_icon_padding">15dp</dimen>
+    <dimen name="frag_profile_user_badge_size">30dp</dimen>
+    <dimen name="frag_profile_user_badge_padding">5dp</dimen>
+    <dimen name="frag_profile_user_type_text_size">12sp</dimen>
+    <dimen name="frag_profile_ride_detail_margin">15dp</dimen>
+    <dimen name="frag_profile_ride_detail_padding">10dp</dimen>
+    <dimen name="frag_profile_ride_detail_text_size">16sp</dimen>
+    <dimen name="frag_profile_ride_detail_text_desc_size">14sp</dimen>
+    <dimen name="frag_profile_ride_detail_text_mTop">5dp</dimen>
+    <dimen name="frag_profile_rv_mStart">10dp</dimen>
+    <dimen name="frag_profile_rv_mTop">15dp</dimen>
+    <dimen name="frag_profile_rv_item_mBottom">10dp</dimen>
+    <dimen name="frag_profile_rv_item_padding">25dp</dimen>
+    <dimen name="frag_profile_rv_item_pEnd">10dp</dimen>
+    <dimen name="frag_profile_rv_item_text_size">16sp</dimen>
+    <dimen name="frag_profile_rv_item_mEnd">10dp</dimen>
+    <dimen name="frag_profile_rv_item_small_text_size">14sp</dimen>
+    <dimen name="nav_header_mBottom">10dp</dimen>
+    <dimen name="nav_header_textSize">24sp</dimen>
+    <dimen name="nav_header_user_icon_size">150dp</dimen>
+    <dimen name="nav_header_user_icon_padding">15dp</dimen>
+    <dimen name="nav_header_user_badge_size">30dp</dimen>
+    <dimen name="nav_header_user_badge_padding">5dp</dimen>
+    <dimen name="frag_profile_rider_text_size">12sp</dimen>
+
+    <!--OTP and Password View-->
+    <dimen name="otp_view_text_size">18sp</dimen>
+    <dimen name="otp_view_edit_text_size">50dp</dimen>
+    <dimen name="otp_view_edit_text_space">2dp</dimen>
+    <dimen name="otp_view_text_margin">20dp</dimen>
+    <dimen name="pass_change_icon_size">100dp</dimen>
+    <dimen name="pass_change_margin">40dp</dimen>
+    <dimen name="pass_change_heading_text">16sp</dimen>
+    <dimen name="pass_change_marginTop">10dp</dimen>
+
+    <!--Schedule ride-->
+    <dimen name="schedule_ride_image_height">200dp</dimen>
+    <dimen name="schedule_ride_tv_mTop">15dp</dimen>
+    <dimen name="schedule_ride_radio_margin">5dp</dimen>
+    <dimen name="schedule_ride_adater_text_mTop">30dp</dimen>
+    <dimen name="schedule_ride_custom_icon_mEnd">5dp</dimen>
+    <dimen name="schedule_ride_row_mTop">20dp</dimen>
+    <dimen name="schedule_ride_recycler_margin">20dp</dimen>
+    <dimen name="schedule_ride_tv_mStart">10dp</dimen>
+    <dimen name="vehicle_view_tv_mStart">5dp</dimen>
+
+    <!--Spinner-->
+    <dimen name="ic_down_icon_size">24dp</dimen>
+    <dimen name="spinner_border_radius">22dp</dimen>
+    <dimen name="spinner_border_padding_left">10dp</dimen>
+    <dimen name="spinner_border_padding_right">5dp</dimen>
+    <dimen name="halt_mStart">10dp</dimen>
+
+
+</resources>

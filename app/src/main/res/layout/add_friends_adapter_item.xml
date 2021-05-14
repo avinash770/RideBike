@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/uv_friend_image"
+        android:layout_width="@dimen/add_friends_image_size"
+        android:layout_height="@dimen/add_friends_image_size"
+        android:paddingTop="@dimen/add_friends_image_padding"
+        android:paddingEnd="@dimen/add_friends_image_padding"
+        android:paddingBottom="@dimen/add_friends_image_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/add_friends_text_mStart"
+        android:fontFamily="@font/sf_ui_display_bold"
+        android:textColor="@color/textColorWhite"
+        android:textSize="@dimen/add_friends_textsize"
+        app:layout_constraintBottom_toBottomOf="@id/uv_friend_image"
+        app:layout_constraintStart_toEndOf="@id/uv_friend_image"
+        app:layout_constraintTop_toTopOf="@id/uv_friend_image" />
+
+    <CheckBox
+        android:id="@+id/cb_friend_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:button="@drawable/custom_checkbox"
+        android:paddingStart="@dimen/add_friends_checkbox_padding"
+        app:layout_constraintBottom_toBottomOf="@id/uv_friend_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/uv_friend_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

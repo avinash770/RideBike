@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".views.SelectInterestActivity">
+
+    <!--  Including common header  -->
+    <include
+        android:id="@+id/select_interest_header"
+        layout="@layout/common_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--  Including common button  -->
+    <include
+        android:id="@+id/button_layout"
+        layout="@layout/common_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/subheading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/select_interest_subheading_margin"
+        android:layout_marginTop="@dimen/select_interest_subheading_margin"
+        android:text="@string/select_interest_subheading"
+        android:textSize="@dimen/subheading_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/select_interest_header" />
+
+    <!--Scroll view for setting Rides and Activities adapter-->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/frag_social_scrollview_mTop"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        android:layout_marginStart="@dimen/select_interest_recycler_mStartEnd"
+        android:layout_marginEnd="@dimen/select_interest_recycler_mStartEnd"
+        app:layout_constraintBottom_toTopOf="@id/button_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subheading">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_riding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/select_interest_recycler_mTop"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/riding"
+                android:textSize="@dimen/subheading_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--   Recycler view for select interest options -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_select_interest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_riding" />
+
+            <TextView
+                android:id="@+id/tv_activities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/select_interest_recycler_mTop"
+                android:visibility="gone"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/activities"
+                android:textSize="@dimen/subheading_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_select_interest" />
+
+            <!--   Recycler view for activity options -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_select_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_activities" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

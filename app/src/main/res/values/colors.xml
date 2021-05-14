@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="splash_heading_color">#e8b586</color>
+    <color name="login_view_divider_color">#889686</color>
+    <color name="login_view_edittext_color">#888686</color>
+    <color name="login_view_forgot_pass_color">#ff7200</color>
+    <color name="common_button_text_color">#000</color>
+    <color name="textColorWhite">#fff</color>
+    <color name="select_interest_heading_color">#e8b586</color>
+    <color name="join_button_color">#FEC590</color>
+    <color name="text_color_black">#000000</color>
+    <color name="bottom_bar_icon_color">#e8b586</color>
+    <color name="home_view_name_color">#828282</color>
+    <color name="sos_bg_color">#FE0000</color>
+    <color name="home_navigation_drawer_bg">#424242</color>
+    <color name="home_navigation_drawer_icon_bg">#848484</color>
+    <color name="home_view_shadow_view_bg">#B3000000</color>
+    <color name="home_bottom_nav_bg">#424242</color>
+    <color name="frag_home_item_bg">#202020</color>
+    <color name="frag_profile_user_type_text_bg">#848484</color>
+    <color name="frag_profile_ride_detail_text_desc_bg">#848484</color>
+    <color name="frag_profile_rv_item_small_text_bg">#848484</color>
+    <color name="frag_profile_adapter_bg">#2A2A2A</color>
+    <color name="hintColorGrey">#D5D5D5</color>
+    <color name="ic_down_icon_color">#999999</color>
+    <color name="spinner_border_bg_color">#424242</color>
+</resources>

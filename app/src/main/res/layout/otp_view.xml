@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_enter_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_otp"
+        android:textSize="@dimen/otp_view_text_size" />
+
+    <!--Layout for combining all edit text-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="@dimen/otp_view_edit_text_size"
+            android:layout_height="@dimen/otp_view_edit_text_size"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <Space
+            android:layout_width="@dimen/otp_view_edit_text_space"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="@dimen/otp_view_edit_text_size"
+            android:layout_height="@dimen/otp_view_edit_text_size"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <Space
+            android:layout_width="@dimen/otp_view_edit_text_space"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/et3"
+            android:layout_width="@dimen/otp_view_edit_text_size"
+            android:layout_height="@dimen/otp_view_edit_text_size"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <Space
+            android:layout_width="@dimen/otp_view_edit_text_space"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/et4"
+            android:layout_width="@dimen/otp_view_edit_text_size"
+            android:layout_height="@dimen/otp_view_edit_text_size"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <Space
+            android:layout_width="@dimen/otp_view_edit_text_space"
+            android:visibility="gone"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/et5"
+            android:layout_width="@dimen/otp_view_edit_text_size"
+            android:layout_height="@dimen/otp_view_edit_text_size"
+            android:cursorVisible="false"
+            android:visibility="gone"
+            android:gravity="center"
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <Space
+            android:layout_width="@dimen/otp_view_edit_text_space"
+            android:visibility="gone"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/et6"
+            android:layout_width="@dimen/otp_view_edit_text_size"
+            android:layout_height="@dimen/otp_view_edit_text_size"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:visibility="gone"
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <!--Resend OTP text-->
+    <TextView
+        android:id="@+id/et_resend_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/otp_view_text_margin"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:gravity="end"
+        android:text="@string/resend_otp"
+        android:textColor="@color/splash_heading_color"
+        android:textSize="@dimen/text_size_14sp" />
+
+
+</LinearLayout>

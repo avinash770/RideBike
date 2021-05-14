@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_group_image"
+        android:layout_width="@dimen/join_group_image_size"
+        android:layout_height="@dimen/join_group_image_size"
+        android:paddingTop="@dimen/join_group_image_padding"
+        android:paddingEnd="@dimen/join_group_image_padding"
+        android:paddingBottom="@dimen/join_group_image_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_group_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/join_group_image_padding"
+        app:layout_constraintBottom_toBottomOf="@id/iv_group_image"
+        app:layout_constraintStart_toEndOf="@id/iv_group_image"
+        app:layout_constraintTop_toTopOf="@id/iv_group_image">
+
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/textColorWhite"
+            android:textSize="@dimen/join_group_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_no_members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/join_group_subtext_size"
+            app:layout_constraintStart_toStartOf="@id/tv_group_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_group_name" />
+
+        <TextView
+            android:id="@+id/tv_group_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/join_group_subtext_size"
+            app:layout_constraintBottom_toBottomOf="@id/tv_no_members"
+            app:layout_constraintStart_toEndOf="@id/tv_no_members"
+            app:layout_constraintTop_toTopOf="@id/tv_no_members" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_join_request_view"
+        android:layout_width="@dimen/join_group_view_size"
+        android:layout_height="0dp"
+        android:background="@drawable/join_group_button_bg"
+        app:layout_constraintBottom_toBottomOf="@id/cl_group_text_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cl_group_text_layout">
+
+        <TextView
+            android:id="@+id/tv_join_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:padding="@dimen/join_group_button_padding"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/join_group_subtext_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

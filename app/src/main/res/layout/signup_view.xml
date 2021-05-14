@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/login_view_mHorizontal">
+
+    <!--Name edit text-->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_name_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:hint="@string/name"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:padding="@dimen/login_view_edittext_padding"
+        android:textColorHint="@color/login_view_edittext_color"
+        android:textSize="@dimen/login_view_edittext_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/iv_below_name"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/login_view_divider_height"
+        android:background="@color/login_view_divider_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_name_register" />
+
+    <!--Email edit text-->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_email_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_view_edittext_mTop"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:hint="@string/e_mail"
+        android:includeFontPadding="false"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/login_view_edittext_padding"
+        android:textColorHint="@color/login_view_edittext_color"
+        android:textSize="@dimen/login_view_edittext_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_below_name" />
+
+    <View
+        android:id="@+id/iv_below_email"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/login_view_divider_height"
+        android:background="@color/login_view_divider_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_email_register" />
+
+    <!--Password edit text-->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_password_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_view_edittext_mTop"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_password_visibility"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:hint="@string/set_password"
+        android:includeFontPadding="false"
+        android:inputType="textPassword"
+        android:padding="@dimen/login_view_edittext_padding"
+        android:textColorHint="@color/login_view_edittext_color"
+        android:textSize="@dimen/login_view_edittext_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_below_email" />
+
+    <View
+        android:id="@+id/iv_below_password"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/login_view_divider_height"
+        android:background="@color/login_view_divider_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_password_sign_up" />
+
+    <!--Signup button-->
+    <TextView
+        android:id="@+id/tv_signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_marginHorizontal="@dimen/common_button_mHorizontal"
+        android:layout_marginTop="@dimen/common_button_mTop"
+        android:background="@drawable/login_button"
+        android:fontFamily="@font/sf_ui_display_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/sign_up"
+        android:textColor="@color/common_button_text_color"
+        android:textSize="@dimen/common_button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/login_with"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_below_password"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <!--Login with layout-->
+    <LinearLayout
+        android:id="@+id/login_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/ll_sign_up_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_signup_button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:includeFontPadding="false"
+            android:text="@string/sign_up_with"
+            android:textColor="@color/textColorWhite"
+            android:textSize="@dimen/login_view_edittext_size" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tv_facebook_register"
+            android:layout_width="@dimen/login_view_fb_icon_size"
+            android:layout_height="@dimen/login_view_fb_icon_size"
+            android:padding="@dimen/login_view_fb_icon_padding"
+            android:src="@drawable/ic_facebook" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tv_google_register"
+            android:layout_width="@dimen/login_view_fb_icon_size"
+            android:layout_height="@dimen/login_view_fb_icon_size"
+            android:paddingTop="@dimen/login_view_fb_icon_padding"
+            android:paddingEnd="@dimen/login_view_fb_icon_padding"
+            android:paddingBottom="@dimen/login_view_fb_icon_padding"
+            android:src="@drawable/ic_google" />
+
+    </LinearLayout>
+
+    <!--Login view line-->
+    <LinearLayout
+        android:id="@+id/ll_sign_up_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_with">
+
+        <TextView
+            android:id="@+id/tv_no_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:includeFontPadding="false"
+            android:text="@string/already_have_account"
+            android:textColor="@color/textColorWhite"
+            android:textSize="@dimen/login_view_edittext_size" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/login_view_edittext_padding"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:includeFontPadding="false"
+            android:text="@string/login"
+            android:textColor="@color/login_view_forgot_pass_color"
+            android:textSize="@dimen/login_view_edittext_size" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

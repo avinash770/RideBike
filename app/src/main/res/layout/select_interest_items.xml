@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_select_interest"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/recycler_view_item_margin"
+    card_view:cardBackgroundColor="@android:color/transparent"
+    card_view:cardElevation="0dp">
+
+    <LinearLayout
+        android:id="@+id/cv_predefined_loc_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--image for interest-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <!--title for interest-->
+        <TextView
+            android:id="@+id/cv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/recycler_view_item_text_margin"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:singleLine="true"
+            android:textColor="@color/textColorWhite"
+            android:textSize="@dimen/recycler_view_item_text_size" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

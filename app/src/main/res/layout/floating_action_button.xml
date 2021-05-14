@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!--Floating button for add icon-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/home_fab_margin"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/bottom_bar_icon_color"
+        app:elevation="@dimen/home_fab_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:pressedTranslationZ="@dimen/home_fab_translationZ" />
+
+    <!--Layout for adding item icons and text-->
+    <LinearLayout
+        android:id="@+id/create_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_fab_margin"
+        android:layout_marginEnd="@dimen/home_fab_mEnd"
+        android:layout_marginBottom="@dimen/home_fab_margin"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/add_icon"
+        app:layout_constraintEnd_toEndOf="@id/add_icon">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:text="@string/create_a_group"
+            android:textSize="@dimen/home_fab_text_size" />
+
+        <com.ridebike.custom.icons.CustomIcon
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/home_fab_mStart"
+            android:background="@drawable/white_bg_floating_icon"
+            android:gravity="center"
+            android:text="@string/creare_grp_icon"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/home_fab_item_size"
+            app:pressedTranslationZ="@dimen/home_fab_translationZ" />
+
+    </LinearLayout>
+
+    <!--Layout for adding item icons and text-->
+    <LinearLayout
+        android:id="@+id/schedule_ride"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_fab_margin"
+        android:layout_marginEnd="@dimen/home_fab_mEnd"
+        android:layout_marginBottom="@dimen/home_fab_margin"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/create_group"
+        app:layout_constraintEnd_toEndOf="@id/add_icon">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:text="@string/schedule_a_ride"
+            android:textSize="@dimen/home_fab_text_size" />
+
+        <com.ridebike.custom.icons.CustomIcon
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/home_fab_mStart"
+            android:background="@drawable/white_bg_floating_icon"
+            android:gravity="center"
+            android:text="@string/schedule_ride_icon"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/home_fab_item_size"
+            app:pressedTranslationZ="@dimen/home_fab_translationZ" />
+
+    </LinearLayout>
+
+    <!--Layout for adding item icons and text-->
+    <LinearLayout
+        android:id="@+id/create_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_fab_margin"
+        android:layout_marginEnd="@dimen/home_fab_mEnd"
+        android:layout_marginBottom="@dimen/home_fab_margin"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/schedule_ride"
+        app:layout_constraintEnd_toEndOf="@id/add_icon">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:text="@string/create_a_post"
+            android:textSize="@dimen/home_fab_text_size" />
+
+        <com.ridebike.custom.icons.CustomIcon
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/home_fab_mStart"
+            android:background="@drawable/white_bg_floating_icon"
+            android:gravity="center"
+            android:text="@string/create_post_icon"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/home_fab_item_size"
+            app:pressedTranslationZ="@dimen/home_fab_translationZ" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

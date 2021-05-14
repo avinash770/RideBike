@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Layout used for Vehicle detail-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".views.VehicleDetailsActivity">
+
+    <!--  Including common header  -->
+    <include
+        android:id="@+id/vehicle_detail_header"
+        layout="@layout/common_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/select_interest_recycler_mStartEnd"
+        android:layout_marginEnd="@dimen/select_interest_recycler_mStartEnd"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/button_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehicle_detail_header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Subheading text-->
+            <TextView
+                android:id="@+id/subheading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/select_interest_subheading_margin"
+                android:text="@string/vehicle_detail_subheading"
+                android:textSize="@dimen/subheading_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--Vehicle image-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_center_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_upload_bike"
+                app:layout_constraintDimensionRatio="H,0.5:0.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subheading"
+                app:layout_constraintWidth_percent="0.5" />
+
+            <!--Vehicle name-->
+            <TextView
+                android:id="@+id/tv_vehicle_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/vehicle_view_tv_mStart"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/vehicle_name"
+                android:textSize="@dimen/vehicle_view_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_center_image" />
+
+            <!--Name of ride edit text-->
+            <EditText
+                android:id="@+id/et_vehicle_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/vehicle_view_spinner_height"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:text=""
+                android:textSize="@dimen/vehicle_view_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_vehicle_name" />
+
+            <!--Type text-->
+            <TextView
+                android:id="@+id/tv_vehicle_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/vehicle_view_tv_mStart"
+                android:layout_marginTop="@dimen/vehicle_view_layout_mTop"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/vehicle_type"
+                android:textSize="@dimen/vehicle_view_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_vehicle_name" />
+
+            <!--Spinner used for vehicle type-->
+            <Spinner
+                android:id="@+id/vehicle_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/vehicle_view_spinner_height"
+                android:background="@drawable/spinner_border"
+                android:dropDownVerticalOffset="@dimen/spinner_offset"
+                android:spinnerMode="dropdown"
+                android:textAlignment="textEnd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_vehicle_type" />
+
+            <!--Layout for vehicle type and year-->
+            <LinearLayout
+                android:id="@+id/second_row"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vehicle_view_layout_mTop"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vehicle_type_spinner">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/vehicle_view_layout_mEnd"
+                    android:layout_weight="1">
+
+                    <!--Type text-->
+                    <TextView
+                        android:id="@+id/tv_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/vehicle_view_tv_mStart"
+                        android:fontFamily="@font/sf_ui_display_regular"
+                        android:text="@string/type"
+                        android:textSize="@dimen/vehicle_view_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--Spinner used for ride type-->
+                    <Spinner
+                        android:id="@+id/type_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/vehicle_view_spinner_height"
+                        android:background="@drawable/spinner_border"
+                        android:dropDownVerticalOffset="@dimen/spinner_offset"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_type" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/vehicle_view_layout_mEnd"
+                    android:layout_weight="1">
+
+                    <!--Year text-->
+                    <TextView
+                        android:id="@+id/tv_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/vehicle_view_tv_mStart"
+                        android:fontFamily="@font/sf_ui_display_regular"
+                        android:text="@string/year"
+                        android:textSize="@dimen/vehicle_view_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--Spinner used for years-->
+                    <Spinner
+                        android:id="@+id/year_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/vehicle_view_spinner_height"
+                        android:background="@drawable/spinner_border"
+                        android:dropDownVerticalOffset="@dimen/spinner_offset"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_year" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <!--Layout used for company and model-->
+            <LinearLayout
+                android:id="@+id/third_row"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vehicle_view_layout_mTop"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/second_row">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/vehicle_view_layout_mEnd"
+                    android:layout_weight="1">
+
+                    <!--Company text-->
+                    <TextView
+                        android:id="@+id/tv_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/vehicle_view_tv_mStart"
+                        android:fontFamily="@font/sf_ui_display_regular"
+                        android:text="@string/company"
+                        android:textSize="@dimen/vehicle_view_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--Spinner used for brand name-->
+                    <Spinner
+                        android:id="@+id/company_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/vehicle_view_spinner_height"
+                        android:background="@drawable/spinner_border"
+                        android:dropDownVerticalOffset="@dimen/spinner_offset"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_company" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/vehicle_view_layout_mEnd"
+                    android:layout_weight="1">
+
+                    <!--Model text-->
+                    <TextView
+                        android:id="@+id/tv_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/vehicle_view_tv_mStart"
+                        android:fontFamily="@font/sf_ui_display_regular"
+                        android:text="@string/model"
+                        android:textSize="@dimen/vehicle_view_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--Spinner used for model-->
+                    <Spinner
+                        android:id="@+id/model_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/vehicle_view_spinner_height"
+                        android:background="@drawable/spinner_border"
+                        android:dropDownVerticalOffset="@dimen/spinner_offset"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_model" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!--  Including bottom button  -->
+    <include
+        android:id="@+id/button_layout"
+        layout="@layout/common_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

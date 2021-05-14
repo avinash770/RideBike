@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--XML used for create group activity-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image">
+
+    <!--  Including common header  -->
+    <include
+        android:id="@+id/vehicle_detail_header"
+        layout="@layout/common_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Scroll view for full main content-->
+    <ScrollView
+        android:id="@+id/schedule_ride_main_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/select_interest_recycler_mStartEnd"
+        android:layout_marginTop="@dimen/vehicle_detail_image_mTop"
+        android:layout_marginEnd="@dimen/select_interest_recycler_mStartEnd"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/button_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehicle_detail_header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Image used for group-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_center_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_upload_bike"
+                app:layout_constraintDimensionRatio="H,0.5:0.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+
+            <!--Group Name text view-->
+            <TextView
+                android:id="@+id/tv_name_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/schedule_ride_tv_mStart"
+                android:layout_marginTop="@dimen/schedule_ride_tv_mTop"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/name_group"
+                android:textSize="@dimen/vehicle_view_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_center_image" />
+
+            <!--Name of ride edit text-->
+            <EditText
+                android:id="@+id/et_name_group"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/vehicle_view_spinner_height"
+                android:background="@drawable/edittext_border"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:text=""
+                android:textSize="@dimen/vehicle_view_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name_group"
+                tools:ignore="LabelFor" />
+
+            <!--Description text view-->
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/schedule_ride_tv_mStart"
+                android:layout_marginTop="@dimen/schedule_ride_tv_mTop"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/description"
+                android:textSize="@dimen/vehicle_view_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_name_group" />
+
+            <!--Description box-->
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/vehicle_view_spinner_height"
+                android:background="@drawable/edittext_border"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:text=""
+                android:textSize="@dimen/vehicle_view_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                tools:ignore="LabelFor" />
+
+            <!--Layout used to set spinner items-->
+            <LinearLayout
+                android:id="@+id/ll_group_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vehicle_view_layout_mTop"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_description">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/vehicle_view_layout_mEnd"
+                    android:layout_weight="1">
+
+                    <!--State text-->
+                    <TextView
+                        android:id="@+id/tv_vehicle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/schedule_ride_tv_mStart"
+                        android:fontFamily="@font/sf_ui_display_regular"
+                        android:text="@string/name_state"
+                        android:textSize="@dimen/vehicle_view_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--Spinner used for states-->
+                    <Spinner
+                        android:id="@+id/state_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/vehicle_view_spinner_height"
+                        android:background="@drawable/spinner_border"
+                        android:dropDownVerticalOffset="@dimen/spinner_offset"
+                        android:paddingStart="10dp"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_vehicle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/vehicle_view_layout_mEnd"
+                    android:layout_weight="1">
+
+                    <!--City text-->
+                    <TextView
+                        android:id="@+id/tv_trip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/schedule_ride_tv_mStart"
+                        android:fontFamily="@font/sf_ui_display_regular"
+                        android:text="@string/name_city"
+                        android:textSize="@dimen/vehicle_view_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--Spinner used for city-->
+                    <Spinner
+                        android:id="@+id/city_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/vehicle_view_spinner_height"
+                        android:background="@drawable/spinner_border"
+                        android:dropDownVerticalOffset="@dimen/spinner_offset"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_trip" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <!--First plan text view-->
+            <TextView
+                android:id="@+id/tv_first_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/schedule_ride_tv_mStart"
+                android:layout_marginTop="@dimen/schedule_ride_tv_mTop"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/first_plan"
+                android:textSize="@dimen/vehicle_view_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_group_location" />
+
+            <!--Meeting point edit text-->
+            <EditText
+                android:id="@+id/et_first_plan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/vehicle_view_spinner_height"
+                android:background="@drawable/edittext_border"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:text=""
+                android:textSize="@dimen/vehicle_view_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_first_plan"
+                tools:ignore="LabelFor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!--Including adapter view to add friends and groups-->
+    <include
+        android:id="@+id/create_group_adapter_view"
+        layout="@layout/create_group_adapter_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/select_interest_recycler_mStartEnd"
+        android:layout_marginTop="@dimen/add_friends_center_view_mTop"
+        android:layout_marginEnd="@dimen/select_interest_recycler_mStartEnd"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/button_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehicle_detail_header" />
+
+    <!--  Including bottom button  -->
+    <include
+        android:id="@+id/button_layout"
+        layout="@layout/common_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Progress bar-->
+    <include
+        android:id="@+id/llProgressBar"
+        layout="@layout/progress_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/button_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
