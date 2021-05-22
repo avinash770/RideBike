@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp">
+
+    <TextView
+        android:id="@+id/date_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_ui_display_semibold"
+        android:textColor="@color/textColorWhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_top_add_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/date_header">
+
+        <TextView
+            android:id="@+id/tv_halt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="@dimen/schedule_ride_tv_mTop"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:padding="@dimen/vehicle_view_text_padding"
+            android:text="@string/one_halt_loc"
+            android:textSize="@dimen/vehicle_view_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Name of ride edit text-->
+        <EditText
+            android:id="@+id/et_halt_location"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vehicle_view_spinner_height"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext_border"
+            android:inputType="text"
+            android:text=""
+            android:textSize="@dimen/vehicle_view_text_size"
+            app:layout_constraintEnd_toStartOf="@id/iv_add_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_halt" />
+
+        <ImageView
+            android:id="@+id/iv_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_circle_outline_black"
+            app:layout_constraintBottom_toBottomOf="@id/et_halt_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_halt_location" />
+
+        <TextView
+            android:id="@+id/tv_time_halt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="@dimen/schedule_ride_tv_mTop"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:padding="@dimen/vehicle_view_text_padding"
+            android:text="Time"
+            android:textSize="@dimen/vehicle_view_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_halt_location" />
+
+        <!--Name of ride edit text-->
+        <RelativeLayout
+            android:id="@+id/rl_start_time"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vehicle_view_spinner_height"
+            android:background="@drawable/edittext_border"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/et_halt_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_time_halt">
+
+            <com.ridebike.custom.icons.CustomIcon
+                android:id="@+id/time_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="z" />
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:includeFontPadding="false"
+                android:text=""
+                android:textColor="@color/textColorWhite"
+                android:textSize="@dimen/vehicle_view_text_size" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_top_add_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

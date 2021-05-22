@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <!--Layout used to set multiple radio groups-->
+    <LinearLayout
+        android:id="@+id/ll_radio_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_single_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/schedule_ride_tv_mTop"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:padding="@dimen/vehicle_view_text_padding"
+            android:text="@string/is_it_a_private_ride_or_can_anyone_join"
+            android:textSize="@dimen/vehicle_view_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Radio group for private and public trip-->
+        <RadioGroup
+            android:id="@+id/radio_single_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/schedule_ride_radio_margin"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_single_day">
+
+            <RadioButton
+                android:id="@+id/radio_private"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@android:color/transparent"
+                android:drawableStart="@drawable/custom_checkbox"
+                android:drawablePadding="@dimen/schedule_ride_tv_mTop"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/private_trip"
+                android:textSize="@dimen/vehicle_view_text_size" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@android:color/transparent"
+                android:drawableStart="@drawable/custom_checkbox"
+                android:drawablePadding="@dimen/schedule_ride_tv_mTop"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/public_trip"
+                android:textSize="@dimen/vehicle_view_text_size" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/schedule_ride_row_mTop"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:padding="@dimen/vehicle_view_text_padding"
+            android:text="@string/do_you_want_to_invite_friends_or_whole_group"
+            android:textSize="@dimen/vehicle_view_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Radio group for selecting friends and groups-->
+        <RadioGroup
+            android:id="@+id/radio_invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/schedule_ride_radio_margin"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_invite">
+
+            <RadioButton
+                android:id="@+id/radio_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@android:color/transparent"
+                android:drawableStart="@drawable/custom_checkbox"
+                android:drawablePadding="@dimen/schedule_ride_tv_mTop"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/friends"
+                android:textSize="@dimen/vehicle_view_text_size" />
+
+            <RadioButton
+                android:id="@+id/radio_groups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@android:color/transparent"
+                android:drawableStart="@drawable/custom_checkbox"
+                android:drawablePadding="@dimen/schedule_ride_tv_mTop"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="@string/groups"
+                android:textSize="@dimen/vehicle_view_text_size" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_friends_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/schedule_ride_adater_text_mTop"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:text="@string/friends"
+        android:textColor="@color/textColorWhite"
+        android:textSize="@dimen/subheading_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_radio_view" />
+
+    <TextView
+        android:id="@+id/tv_select_all_schedule_ride"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:text="@string/select_all"
+        android:textSize="@dimen/subheading_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_friends_found" />
+
+    <!--Setting recycler view for friend list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_schedule_ride_friends"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/add_friends_recycler_mTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_friends_found" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

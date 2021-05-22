@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/frag_home_item_mTop"
+    android:background="@color/frag_home_item_bg">
+
+    <!--User Icon-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/home_view_user_icon"
+        android:layout_width="@dimen/frag_home_item_user_icon_size"
+        android:layout_height="@dimen/frag_home_item_user_icon_size"
+        android:paddingTop="@dimen/add_friends_image_padding"
+        android:paddingEnd="@dimen/add_friends_image_padding"
+        android:paddingBottom="@dimen/add_friends_image_padding"
+        android:src="@drawable/ic_friend_one"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--User name-->
+    <TextView
+        android:id="@+id/tv_friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:text="Abhishek Singh"
+        android:textColor="@color/home_view_name_color"
+        android:textSize="@dimen/add_friends_textsize"
+        app:layout_constraintBottom_toBottomOf="@id/home_view_user_icon"
+        app:layout_constraintStart_toEndOf="@id/home_view_user_icon"
+        app:layout_constraintTop_toTopOf="@id/home_view_user_icon" />
+
+    <!--Feed type-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:paddingStart="@dimen/add_friends_checkbox_padding"
+        android:paddingEnd="@dimen/add_friends_checkbox_padding"
+        android:text="Ride"
+        android:textColor="@color/home_view_name_color"
+        android:textSize="@dimen/add_friends_textsize"
+        app:layout_constraintBottom_toBottomOf="@id/home_view_user_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/home_view_user_icon" />
+
+    <!--Heading feed-->
+    <TextView
+        android:id="@+id/home_view_activity_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:includeFontPadding="false"
+        android:paddingStart="@dimen/frag_home_item_title_padding"
+        android:textColor="@color/textColorWhite"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_view_user_icon" />
+
+    <!--Feed image-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/home_view_middle_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/frag_home_item_image_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_view_activity_heading" />
+
+    <!--Feed time-->
+    <TextView
+        android:id="@+id/home_view_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:paddingStart="@dimen/frag_home_item_time_pStart"
+        android:paddingTop="@dimen/frag_home_item_time_pTop"
+        android:paddingBottom="@dimen/frag_home_item_time_pTop"
+        android:textColor="@color/home_view_name_color"
+        android:textSize="@dimen/add_friends_textsize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_view_middle_image" />
+
+    <!--Share icon-->
+    <com.ridebike.custom.icons.CustomIcon
+        android:id="@+id/home_vew_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/frag_home_item_share_icon_pStart"
+        android:paddingEnd="@dimen/add_friends_checkbox_padding"
+        android:text="@string/share_icon"
+        android:textSize="@dimen/frag_home_item_share_icon_size"
+        app:layout_constraintBottom_toBottomOf="@id/home_view_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/home_view_time" />
+
+    <!--Chat Icon-->
+    <com.ridebike.custom.icons.CustomIcon
+        android:id="@+id/home_vew_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/frag_home_item_share_icon_pStart"
+        android:paddingEnd="@dimen/add_friends_checkbox_padding"
+        android:text="@string/comment_icon"
+        android:textSize="@dimen/frag_home_item_share_icon_size"
+        app:layout_constraintBottom_toBottomOf="@id/home_vew_share"
+        app:layout_constraintEnd_toStartOf="@id/home_vew_share"
+        app:layout_constraintTop_toTopOf="@id/home_vew_share" />
+
+    <!--heart icon-->
+    <com.ridebike.custom.icons.CustomIcon
+        android:id="@+id/home_vew_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/frag_home_item_share_icon_pStart"
+        android:paddingEnd="@dimen/add_friends_checkbox_padding"
+        android:text="@string/empty_heart_icon"
+        android:textSize="@dimen/frag_home_item_share_icon_size"
+        app:layout_constraintBottom_toBottomOf="@id/home_vew_share"
+        app:layout_constraintEnd_toStartOf="@id/home_vew_chat"
+        app:layout_constraintTop_toTopOf="@id/home_vew_share" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

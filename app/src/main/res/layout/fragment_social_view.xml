@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!--Radio group for selecting groups and friends-->
+    <RadioGroup
+        android:id="@+id/social_view_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/frag_social_radio_mEnd"
+            android:background="@drawable/home_view_text_background_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:paddingStart="@dimen/frag_social_radio_pStart"
+            android:paddingTop="@dimen/frag_social_radio_pTop"
+            android:paddingEnd="@dimen/frag_social_radio_pEnd"
+            android:paddingBottom="@dimen/frag_social_radio_pBottom"
+            android:text="@string/groups"
+            android:textColor="@drawable/home_view_text_color_selector" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_view_text_background_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:paddingStart="@dimen/frag_social_radio_pStart"
+            android:paddingTop="@dimen/frag_social_radio_pTop"
+            android:paddingEnd="@dimen/frag_social_radio_pEnd"
+            android:paddingBottom="@dimen/frag_social_radio_pBottom"
+            android:text="@string/friends"
+            android:textColor="@drawable/home_view_text_color_selector" />
+    </RadioGroup>
+
+    <!--Filter text view-->
+    <TextView
+        android:id="@+id/tv_social_filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/frag_social_filter_mTop"
+        android:layout_marginEnd="@dimen/frag_social_filter_mEnd"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:padding="@dimen/frag_social_filter_mEnd"
+        android:text="@string/filters"
+        android:textColor="@color/bottom_bar_icon_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/social_view_radio" />
+
+    <!--Search bar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_search_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/frag_social_searchbar_mStart"
+        android:layout_marginEnd="@dimen/frag_social_searchbar_mEnd"
+        android:background="@drawable/social_view_search_bg"
+        app:layout_constraintBottom_toBottomOf="@id/tv_social_filters"
+        app:layout_constraintEnd_toStartOf="@id/tv_social_filters"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_social_filters">
+
+        <com.ridebike.custom.icons.CustomIcon
+            android:id="@+id/ci_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/frag_social_searchbar_icon_mStart"
+            android:text="@string/search_icon"
+            android:textColor="@color/home_view_name_color"
+            android:textSize="@dimen/add_friends_textsize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/frag_social_searchbar_text_mStart"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:text="@string/search"
+            android:textColor="@color/home_view_name_color"
+            android:textSize="@dimen/add_friends_textsize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ci_search"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--Scrollview for setting data-->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/frag_social_scrollview_mTop"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_social_filters"
+        app:layout_constraintStart_toStartOf="@id/cl_search_bar"
+        app:layout_constraintTop_toBottomOf="@id/cl_search_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_your_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_groups"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_your_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frag_social_your_grp_mTop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_your_group" />
+
+            <TextView
+                android:id="@+id/tv_nearby_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frag_social_near_grp_mTop"
+                android:text="@string/nearby_groups"
+                app:layout_constraintStart_toStartOf="@id/rv_your_group"
+                app:layout_constraintTop_toBottomOf="@id/rv_your_group" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_nearby_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frag_social_near_grp_mTop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/rv_your_group"
+                app:layout_constraintStart_toStartOf="@id/rv_your_group"
+                app:layout_constraintTop_toBottomOf="@id/tv_nearby_group" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

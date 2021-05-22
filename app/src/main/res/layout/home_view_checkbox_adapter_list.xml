@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!--Checkbox for selecting news feed-->
+    <CheckBox
+        android:id="@+id/cb_home_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/frag_home_checkbox_mEnd"
+        android:background="@drawable/home_view_text_background_selector"
+        android:button="@android:color/transparent"
+        android:fontFamily="@font/sf_ui_display_semibold"
+        android:paddingStart="@dimen/frag_home_checkbox_pStart"
+        android:paddingTop="@dimen/frag_home_checkbox_pTop"
+        android:paddingEnd="@dimen/frag_home_checkbox_pEnd"
+        android:paddingBottom="@dimen/frag_home_checkbox_pBottom"
+        android:textColor="@drawable/home_view_text_color_selector" />
+
+</LinearLayout>
