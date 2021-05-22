@@ -37,7 +37,7 @@ class JoinGroupActivity : BaseActivity() {
 
         //skip button listener
         tv_skip.setOnClickListener {
-//            startActivity(Intent(this, MainHomeScreenActivity::class.java))
+            startActivity(Intent(this, MainHomeScreenActivity::class.java))
         }
 
         //setting adapter
@@ -46,7 +46,7 @@ class JoinGroupActivity : BaseActivity() {
 
         //next button listener
         common_button_text.setOnClickListener {
-//            startActivity(Intent(this, MainHomeScreenActivity::class.java))
+            startActivity(Intent(this, MainHomeScreenActivity::class.java))
         }
     }
 }
